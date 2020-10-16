@@ -11,5 +11,9 @@ class ServiceProvider extends LaravelServiceProvider
         $this->app->make('router')->aliasMiddleware('api.auth', AuthenticationMiddleware::class);
 
         $this->mergeConfigFrom(__DIR__ . '/../config/api_auth.php', 'api_auth');
+
+        $this->publishes([
+            __DIR__ . '/../config/api_auth.php' => config_path('api_auth.php'),
+        ], 'config');
     }
 }
