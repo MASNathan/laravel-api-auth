@@ -1,0 +1,39 @@
+{
+    "name": "masnathan/laravel-api-auth",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Filipe",
+            "email": "andre.r.flip@gmail.com",
+            "homepage": "https://www.github.com/masnathan",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4",
+        "symfony/var-dumper": "^5.1",
+        "orchestra/testbench": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MASNathan\\LaravelApiAuth\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "MASNathan\\LaravelApiAuth\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
