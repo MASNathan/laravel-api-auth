@@ -37,7 +37,9 @@ class AuthenticationMiddleware
             $user = $provider->authenticate($request);
 
             if ($user !== false) {
-                $this->setUserResolver($request, $type, $user);
+                if ($user !== null) {
+                    $this->setUserResolver($request, $type, $user);
+                }
 
                 return $next($request);
             }
